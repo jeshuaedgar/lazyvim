@@ -3,5 +3,7 @@ return {
   opts = {
     explorer = { enabled = false },
     terminal = { enabled = false },
+    scope = { enabled = false },
+    quickfile = {},
   },
 }
