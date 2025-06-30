@@ -17,7 +17,10 @@ map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear highlights after search
 map("n", "<leader>qq", "<Cmd>qa<CR>", { desc = "[Q]uit all" })
 
 -- editor maps
-map("n", "J", "mzJ`z", { desc = "Join lines but keep cursor position" })
+map("n", "J", function()
+  vim.cmd("normal! mzJ`z")
+  vim.cmd("delmarks z")
+end, { desc = "Join lines but keep cursor position" })
 map("v", "p", "pgvy", { desc = "Allow pasting the same selection multiple times" })
 map("v", "<", "<gv", { desc = "Go back to visual mode after reindent" })
 map("v", ">", ">gv", { desc = "Go back to visual mode after reindent" })
