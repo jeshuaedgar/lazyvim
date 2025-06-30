@@ -28,7 +28,6 @@
     "lazyvim.plugins.extras.util.rest",
     "lazyvim.plugins.extras.vscode",
     "plugins.extras.lang.powershell",
-    "plugins.extras.lang.swift",
     "plugins.extras.util.cloak"
   ],
   "install_version": 8,
