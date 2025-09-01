@@ -31,18 +31,8 @@ map("n", "<BS>", "^", { desc = "Go to first non-whitespace character of the line
 map("n", "Y", "y$", { desc = "[Y]ank til end of line" })
 map("n", "+", "<C-a>", { desc = "Increment" })
 map("n", "-", "<C-x>", { desc = "Decrement" })
-
--- smart splits/tmux lazyvim override
-unmap("n", "<C-h>")
-unmap("n", "<C-j>")
-unmap("n", "<C-k>")
-unmap("n", "<C-l>")
-unmap("n", "<C-Up>")
-unmap("n", "<C-Down>")
-unmap("n", "<C-Left>")
-unmap("n", "<C-Right>")
-unmap({ "n", "i", "v" }, "<A-j>")
-unmap({ "n", "i", "v" }, "<A-k>")
+map("n", "x", '"_x', { desc = "delete char without copying to register" })
+map("x", "<leader>p", '"_dP', { desc = "Replaces selected without yanking" })
 
 -- buffer override
 unmap("n", "<S-h>")
@@ -54,6 +44,3 @@ map("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 -- scroll up/down from center of screen
 map("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
 map("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
-
--- Abbreviations
-vim.api.nvim_command('iab cdate <c-r>=strftime("%Y-%m-%d")<CR')
