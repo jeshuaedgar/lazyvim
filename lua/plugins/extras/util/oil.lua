@@ -1,8 +1,7 @@
 return {
   "stevearc/oil.nvim",
-  priority = 100,
   dependencies = {
-    { "echasnovski/mini.icons", opts = {} },
+    { "nvim-mini/mini.icons", opts = {} },
     { "refractalize/oil-git-status.nvim" },
   },
   ---@module 'oil'
