@@ -20,6 +20,11 @@ return {
           cloak_pattern = ":.+",
           replace = nil,
         },
+        {
+          file_pattern = ".dev.vars*",
+          cloak_pattern = "=.+",
+          replace = nil,
+        },
       },
     })
     -- set keymap for uncloaking
